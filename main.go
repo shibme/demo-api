@@ -11,5 +11,5 @@ func main() {
 	if apiToken == "" {
 		panic("DEMO_API_TOKEN environment variable is not set")
 	}
-	api.Serve(apiToken, 8080)
+	api.Serve(apiToken, 80)
 }

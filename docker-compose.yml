@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  demo-api:
+    image: ghcr.io/shibme/demo-api
+    ports:
+      - "8080:8080"
+    restart: always
+    environment:
+      DEMO_API_TOKEN: ${DEMO_API_TOKEN:-demo_token}
