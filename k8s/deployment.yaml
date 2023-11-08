@@ -15,6 +15,10 @@ spec:
       containers:
       - name: demo-api-container
         image: ghcr.io/shibme/demo-api:latest
+        resources:
+          limits:
+            cpu: "1"
+            memory: "500Mi"
         ports:
         - containerPort: 80
         env:
