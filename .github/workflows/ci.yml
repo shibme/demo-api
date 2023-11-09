@@ -17,12 +17,6 @@ jobs:
           uses: actions/checkout@v4
         - name: Set up Go
           uses: actions/setup-go@v4
-        - name: Run GoReleaser
-          uses: goreleaser/goreleaser-action@v5
-          with:
-            distribution: goreleaser
-            version: latest
-            args: build --snapshot --clean
         - name: Set up QEMU
           uses: docker/setup-qemu-action@v3
         - name: Set up Docker Buildx
