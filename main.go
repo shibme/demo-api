@@ -6,10 +6,14 @@ import (
 	"github.com/shibme/demo-api/api"
 )
 
-func main() {
-	apiToken := os.Getenv("DEMO_API_TOKEN")
-	if apiToken == "" {
-		panic("DEMO_API_TOKEN environment variable is not set")
+func getEnv(envName string) string {
+	env := os.Getenv(envName)
+	if env == "" {
+		panic(envName + " environment variable is not set")
 	}
-	api.Serve(apiToken, 80)
+	return env
+}
+
+func main() {
+	api.Serve(getEnv("DEMO_API_TOKEN"), getEnv("DEMO_API_MESSAGE"), 8888)
 }

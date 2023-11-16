@@ -4,7 +4,7 @@ services:
   demo-api:
     image: ghcr.io/shibme/demo-api
     ports:
-      - "8080:80"
+      - "8888:8888"
     restart: always
     environment:
       DEMO_API_TOKEN: ${DEMO_API_TOKEN:-demo_token}
